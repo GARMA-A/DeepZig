@@ -19,8 +19,11 @@ fn PI() !void {
     try std.io.getStdOut().writer().print("{}", .{pi_value});
 }
 
+
 pub fn main() !void {
-    try PI();
+    std.debug.print("welcome ", .{});
+
+
 }
 
 fn threads() !void {

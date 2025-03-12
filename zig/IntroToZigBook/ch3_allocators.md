@@ -25,8 +25,8 @@ pub fn main() void {
     const allocator = fba.allocator(); // Get allocator
 
     const mem = allocator.alloc(u8, 10) catch unreachable; // Allocate 10 bytes
+}
     std.debug.print("Allocated {} bytes on stack.\n", .{mem.len});
-
     // Insert values into the allocated memory
     for (mem, 0..) |*byte, i| {
         byte.* = @intCast(u8, i * 10); // Assign values (multiples of 10)
