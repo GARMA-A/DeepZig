@@ -24,7 +24,9 @@ cosnt foo : u8 = if(1==1) 12 else 17; // foo now is equal 12
 
 
 ## catch the error union using if or if it optional catch the null
-``zig
+
+```zig
+
 pub fn main() void {
         const n = numberMaybeFail(num);
         if (n) |value| {
@@ -37,6 +39,5 @@ fn numberMaybeFail(n: u8) MyNumberError!u8 {
     if (n < 4) return MyNumberError.TooSmall;
     return n;
 }
-
 
 ```
