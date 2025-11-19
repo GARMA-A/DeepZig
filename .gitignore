@@ -1,1 +1,4 @@
 **/ziglings_Solutions/
+**/.zig-cache/
+**/.exercism/
+**/zig-out/
