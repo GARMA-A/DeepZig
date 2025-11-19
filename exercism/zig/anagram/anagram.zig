@@ -11,6 +11,7 @@ pub fn detectAnagrams(
     var set = std.BufSet.init(allocator);
     errdefer set.deinit();
     const lower_word = try std.ascii.allocLowerString(allocator, word);
+
     defer allocator.free(lower_word);
 
     for (candidates) |str| {
